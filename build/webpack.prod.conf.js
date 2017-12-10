@@ -7,9 +7,12 @@ const CopyWebpackPlugin = require('copy-webpack-plugin')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const OptimizeCSSPlugin = require('optimize-css-assets-webpack-plugin')
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
+const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 const env = require('../config/prod.env')
 const utils = require('./utils')
+
+console.info(utils.resolve(''))
 
 module.exports = merge(baseWebpackConfig, {
   module: {
@@ -26,7 +29,10 @@ module.exports = merge(baseWebpackConfig, {
     chunkFilename: utils.assetsPath('js/[id].[chunkhash].js')
   },
   plugins: [
-    new CleanWebpackPlugin([utils.resolve('dist')]),
+    // clean last file
+    new CleanWebpackPlugin(['dist'], {
+      root: utils.resolve('')
+    }),
     // http://vuejs.github.io/vue-loader/en/workflow/production.html
     new webpack.DefinePlugin({
       'process.env': env
