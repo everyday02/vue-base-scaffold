@@ -9,6 +9,12 @@ const utils = require('./utils')
 const env = require('../config/dev.env')
 
 module.exports = merge(baseWebpackConfig, {
+  module: {
+    rules: utils.styleLoaders({
+      sourceMap: false,
+      usePostCSS: true
+    })
+  },
   devtool: 'eval-source-map',
   devServer: {
     contentBase: utils.resolve('dist'),

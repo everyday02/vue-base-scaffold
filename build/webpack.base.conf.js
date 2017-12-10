@@ -37,7 +37,7 @@ module.exports = {
         options: {
           loaders: utils.cssLoaders({
             sourceMap: true,
-            extract: true
+            extract: process.env.NODE_ENV === 'prod'
           }),
           cssSourceMap: true,
           cacheBusting: false,
