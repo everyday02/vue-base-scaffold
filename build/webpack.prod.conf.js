@@ -12,8 +12,6 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 const env = require('../config/prod.env')
 const utils = require('./utils')
 
-console.info(utils.resolve(''))
-
 module.exports = merge(baseWebpackConfig, {
   module: {
     rules: utils.styleLoaders({

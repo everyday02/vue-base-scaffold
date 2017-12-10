@@ -5,7 +5,7 @@ exports.resolve = (dir) => path.join(__dirname, '..', dir)
 
 exports.assetsPath = (_path) => path.posix.join('static', _path)
 
-exports.cssLoaders = function (options) {
+exports.cssLoaders = (options) => {
   options = options || {}
 
   const cssLoader = {
