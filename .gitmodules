@@ -1,0 +1,6 @@
+[submodule "libs/vue-libs"]
+	path = libs/vue-libs
+	url = https://github.com/hehangfighting/vue-libs.git
+[submodule "libs/lib"]
+	path = libs/lib
+	url = https://github.com/hehangfighting/vue-libs.git
