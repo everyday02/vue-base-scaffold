@@ -4,6 +4,7 @@ import './assets/css/index.scss'
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+import store from './store'
 import ElementUI from 'element-ui'
 
 Vue.config.productionTip = false
@@ -14,6 +15,7 @@ Vue.use(ElementUI, { size: 'small' })
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
+  store,
   router,
   template: '<App/>',
   components: { App }
