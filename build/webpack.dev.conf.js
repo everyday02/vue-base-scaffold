@@ -41,8 +41,7 @@ module.exports = merge(baseWebpackConfig, {
     new FriendlyErrorsPlugin({
       compilationSuccessInfo: {
         messages: [`Your application is running...`],
-      },
-      onErrors: undefined
+      }
     }),
     // https://github.com/ampedandwired/html-webpack-plugin
     new HtmlWebpackPlugin({

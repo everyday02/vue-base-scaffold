@@ -1,7 +1,6 @@
 ### vue-base-scaffold
 > 基础架子模版。 ---- 基于vue-cli  webpack模版抽离的简化版。
 
-
 ### 目录结构说明
 
 ```bash
@@ -20,4 +19,24 @@
 ├── .babelrc         # es6支持配置
 ├── webpack.config.dev.js   # 开发环境打包配置
 ├── webpack.config.prod.js  # 生产环境打包配置
+```
+
+### Element-UI theme监听
+
+```shell
+# 启动监听
+./node_modules/.bin/et  --watch
+```
+
+#### 主题配置
+>  package.json中新增配置项。
+
+```javascript
+"element-theme": {
+  "browsers": ["ie > 9", "last 2 versions"],
+  "out": "./libs/element/theme",
+  "config": "./libs/element/element-variables.scss",
+  "theme": "element-theme-chalk",
+  "minimize": false
+}
 ```
